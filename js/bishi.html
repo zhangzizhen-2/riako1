@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+//     // 1千分符
+//         var str='199888225';
+//         function money(str){
+//             var len = str.length,
+//             ind = len%3,
+//             newStr = str.substr(0,ind);
+//             if(ind == 0){
+//                 newStr = str.substr(0,3);
+//                 ind = 3;
+//             }
+//             for(var i = ind;i< len;i=i+3){
+//                 newStr += ','+str.substr(i,3);
+//             }
+//             return newStr
+//         }
+//          // console.log(money(str))   
+// 	// 2奇数组
+// 		var arr = [1,3,4,5,6,7,8,3,4,2,3,6];
+//         function odd(arr){
+//             var temp = [];
+//             for(var i = 0;i < arr.length;i++){
+//                 if(arr[i]%2 == 1){
+//                     temp.push(arr[i])
+//                 }
+//             }
+//             return temp;
+//         }
+//     // 3偶数最多次数
+//         var arr1 = [1,3,4,5,6,7,8,3,4,2,3,6,4];
+//         function evens(arr){
+//             console.log(arr)
+//             var temp = [];
+//             for(var i = 0;i < arr.length;i++){
+//                 if(arr[i]%2 == 0){
+//                     temp.push(arr[i])
+//                 }
+//             }
+//             return temp;
+//         }
+//         console.log(evens(arr1))
+//         function count(arr,n){
+//             var count = 0;
+//             for(var i = 0;i<arr.length;i++){
+//                 if(arr[i] == n){
+//                     count++
+//                 }
+//             }
+//             return count;
+//         }
+//         var max = 0,maxCon='';
+//         var newArr = evens(arr1);
+//        for(var i=0;i<newArr.length;i++){
+//             var go = count(newArr,newArr[i]);
+//             if(max < go){
+//                 max = go;
+//                 maxCon = newArr[i]
+//             }
+//        }
+//         // console.log("出现最多的字符是"+maxCon+"出现的次数是"+max)
+
+// // 4根据Key 值排序
+//        var data = [
+//             {
+//                 age:2,
+//                 id:0
+//             },{
+//                 age:12,
+//                 id:9
+//             },{
+//                 age:14,
+//                 id:8
+//             },
+//             {                                                       
+//                 age:22,
+//                 id:6
+//             }
+//         ];
+//         function keysrt(key,desc) {
+//             return function(a,b){
+//                 return desc ? a[key] < b[key] : a[key] > b[key];
+//             }
+//         }
+//         console.log(data.sort(keysrt('age',true)));//true:倒序，false:升序*/
+
+// //5 混合模式
+//     function Myinfo(){
+//         this.name = "张梓祯";
+//         this.borth = "1992-12-25";
+//         this.school();
+//     }
+//     Myinfo.prototype.school=function(){
+//         console.log(this.name);
+//     }
+//     var dudu = new Myinfo();
+
+// // 6  定义一个名为examtest的angular服务，包含一个属性为name，一个函数用于打印这个name。（service/factory/provider任选其一）
+//     // service
+//     app.service('server',function(){
+//         this.name = "张三";
+//         this.col = function(){
+//             console.log(this.name)
+//         }
+//     })
+//     // factory
+//     app.factory('facto',function(){
+//         var o = {};
+//         o.name = '战三';
+//         o.col = function(){
+//             console.log(this.name)
+//         }
+//         return o
+//     })
+//     // provider
+//     app.provider('pro',function(){
+//         var name  = 'cds';
+//         var do = fucntion(){
+//             alert(this.name)
+//         }
+//         this.$.get=function(){
+//             return{
+//                 name:name,
+//                 do:do
+//             }
+//         }
+//     })
+// //7 定义一个名为examTest的过滤器，过滤一个存放数字的数组，根据参数（odd奇数，even偶数），返回满足要求的数据。
+// app.filter('examTest',function(){
+//     return function(data,odd){
+//         var temp =[];
+//         for(var i =0;i<data.length;i++){
+//                 if(data[i]%2==1){
+//                     temp.push(data[i])
+//                 }
+//         }
+//         return temp
+//     }
+// })
+// function sort(arr){
+//    return quickSort(arr,0,arr.length-1);
+//    function quickSort(arr,l,r){
+//        if(l<r){
+//           var mid=arr[parseInt((l+r)/2)],i=l-1,j=r+1;//求中间值
+//           while(true){
+//           //大的放到右边，小的放到左边, i与j均为游标
+//             while(arr[++i]<mid);
+//             while(arr[--j]>mid);
+//             if(i>=j)break;//判断条件
+//             var temp = arr[i];
+//             arr[i]=arr[j];
+//             arr[j]=temp;
+//           } 
+//           quickSort(arr,l,i-1);
+//           quickSort(arr,j+1,r);
+//        }
+//       return arr;
+//    }
+var nums = [1,8,9,3];nums.splice(1,1,6);console.log(nums)
+function getType(arg){
+ var name = arg?arg:'admin';
+ return name;
+}
+console.log(getType(0));
+
+function Add(){
+    this.name='aa';
+    this.go();
+}
+Add.prototype.go=function(){
+    this.name='bb';
+    console.log(this.name)
+}
+new Add()
+	</script>
+</body>
+</html>
